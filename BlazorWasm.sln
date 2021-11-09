@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorNetStandard21", "BlazorNetStandard21\BlazorNetStandard21.csproj", "{E5B79958-89D2-46EC-A2C2-240EB0D66172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorNet6", "BlazorNet6\BlazorNet6.csproj", "{C703018A-A495-4BEB-B37A-80B5EB9C1428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5B79958-89D2-46EC-A2C2-240EB0D66172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B79958-89D2-46EC-A2C2-240EB0D66172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B79958-89D2-46EC-A2C2-240EB0D66172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B79958-89D2-46EC-A2C2-240EB0D66172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C703018A-A495-4BEB-B37A-80B5EB9C1428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C703018A-A495-4BEB-B37A-80B5EB9C1428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C703018A-A495-4BEB-B37A-80B5EB9C1428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C703018A-A495-4BEB-B37A-80B5EB9C1428}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19CBA91E-87A9-4034-B30D-76679677E521}
+	EndGlobalSection
+EndGlobal

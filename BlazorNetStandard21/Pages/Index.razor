@@ -1,0 +1,56 @@
+﻿@page "/"
+@using System.Reflection
+@using Microsoft.Extensions.Logging
+@inject ILogger<Index> logger
+
+<h1 style="text-align: center;">.NET Standard 2.1</h1>
+<br />
+<hr />
+<br />
+<button style="margin-left: 45%;" @onclick="@ButtonClick">Run</button>
+<br />
+<hr />
+<br />
+<h1 style="text-align: center;">@State</h1>
+
+@code {
+    private const string SourceCode = @"using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine(""Hello World"");
+	}
+}";
+
+    [Inject]
+    public HttpClient HttpClient { get; set; }
+
+    public string State { get; set; }
+
+    public void ButtonClick(MouseEventArgs args)
+    {
+        try
+        {
+            if (Compiler.TryLoadSource(SourceCode, out Assembly assembly))
+            {
+                State = "It worked!";
+            }
+            else
+            {
+                State = "Didn't work!";
+            }
+        }
+        catch (Exception e)
+        {
+            State = $"Didn't work!\n{e}";
+        }
+        this.StateHasChanged();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await Compiler.InitializeMetadataReferencesAsync(HttpClient);
+    }
+}
