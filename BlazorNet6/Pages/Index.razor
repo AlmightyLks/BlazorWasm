@@ -44,7 +44,8 @@ public class Program
         }
         catch (Exception e)
         {
-            State = $"Didn't work!\n{e}";
+            State = $"{e}";
+            throw e;
         }
         this.StateHasChanged();
     }
